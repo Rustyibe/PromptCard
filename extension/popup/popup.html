@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>AI Prompt Manager</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="container">
+    <div class="header">
+      <div class="header-content">
+        <button id="backBtn" class="back-btn" style="display: none;">
+          <span>←</span>
+          返回
+        </button>
+        <h1 id="pageTitle">AI 提示词管理器</h1>
+      </div>
+    </div>
+    
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="搜索提示词...">
+    </div>
+    
+    <div id="categoriesView" class="main-content">
+      <div class="categories-panel">
+        <div class="categories-header">
+          <h2>主题</h2>
+          <div class="category-actions">
+            <button id="importBtn" class="import-btn">
+              <span>📂</span>
+              导入
+            </button>
+            <button id="exportBtn" class="export-btn">
+              <span>📤</span>
+              导出
+            </button>
+            <button id="addCategoryBtn" class="add-btn">
+              <span>+</span>
+              新建主题
+            </button>
+          </div>
+        </div>
+        <ul id="categoriesList" class="categories-list"></ul>
+      </div>
+    </div>
+    
+    <div id="promptsView" class="main-content" style="display: none;">
+      <div class="prompts-panel">
+        <div class="prompts-header">
+          <h2 id="selectedCategoryTitle">选择一个主题</h2>
+          <div class="prompt-actions">
+            <button id="addPromptBtn" class="add-btn">
+              <span>+</span>
+              新建提示
+            </button>
+            <button id="copyAllBtn" class="action-btn">复制全部</button>
+          </div>
+        </div>
+        <ul id="promptsList" class="prompts-list"></ul>
+      </div>
+    </div>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>
